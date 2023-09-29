@@ -1,0 +1,87 @@
+/*** General ***/
+
+
+* {
+/* Définition de la police */
+    font-family: 'Roboto', sans-serif;
+
+/* Variables pour les couleurs */
+    $white: #FFFFFF;
+    $green-bg: #99E2D0;
+    $green-ft:#008766;
+    $purple: #9356DC;
+    $black: #101010;
+    $location:#353535;
+    $iconnav:#7E7E7E;
+    $bgnav: #EAEAEA;
+    $background: #F6F6F6;
+    $button-gradient: linear-gradient(to top, #9356DC, #FF79DA);
+
+/* Icônes  de FontAwesome */
+    .fa-location-dot{
+        color: $location;
+    }
+    .fa-mobile-screen-button, .fa-list{
+        color: $iconnav;
+    }
+    .fa-store{
+        color: $purple;
+    }
+
+/* Centrer le contenu du corps de la page */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .card {
+        background-color: white;
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+        border-radius: 20px;
+        text-decoration: none;
+        color: black;
+        padding: 5px;
+        margin-bottom: 20px;
+        img {
+            object-fit:cover;
+        }
+    }
+}
+
+header {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .logo {
+        margin: 15px;
+        
+    }
+    .nav {
+        box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.15);
+        display: flex;
+        background-color: $bgnav;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+        
+}
+
+}
+
+  
+  /* Bases pour les cartes (hebergement & populaire) */
+.card {
+    background-color: white;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+}
