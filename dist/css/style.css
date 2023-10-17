@@ -1,12 +1,11 @@
 @charset "UTF-8";
 /*** General ***/
 * {
+  /* Variables pour les couleurs */
   /* Définition de la police */
   font-family: "Roboto", sans-serif;
-  /* Variables pour les couleurs */
-  /* Icônes  de FontAwesome */
+  /* Icônes FontAwesome */
   /* Centrer le contenu du corps de la page */
-  /* Bases pour les cartes (hebergement & populaire) */
 }
 * .fa-location-dot {
   color: #353535;
@@ -22,45 +21,144 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
+  /* Bases pour les cartes */
 }
-* body .card {
-  background-color: white;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-  border-radius: 20px;
-  text-decoration: none;
-  color: black;
-  padding: 5px;
-  margin-bottom: 20px;
-}
-* body .card img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-* header {
+* body header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-* header .logo {
+* body header .logo {
   margin: 15px;
 }
-* header .nav {
-  box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.15);
+* body header .place { /*** Affichage inconplet (ombre) ***/
   display: flex;
+  align-items: baseline;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
   background-color: #EAEAEA;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   width: 100%;
-  gap: 20px;
+  gap: 15px;
 }
-* .card {
+* body header .place p, * body header .place i {
+  background-color: #EAEAEA;
+}
+* body .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+* body .info h1 {
+  font-weight: 700;
+  font-size: 24px;
+}
+* body .info p {
+  font-weight: 300;
+  font-size: 18px;
+}
+* body .button {
+  display: flex;
+  align-items: center;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+* body .button a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  flex-grow: 1; /* Etendre le texte sur toute la largeur */
+}
+* body .option {
+  display: flex;
+  flex-direction: column;
+}
+* body .option__choice {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3%;
+}
+* body .option__choice .num {
+  font-size: 14.18px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: white;
+  background-color: #9356DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* body .option__choiceButton {
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+  background: var(--Background, #F6F6F6);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  width: 85vw;
+  gap: 5%;
+  align-items: center;
+}
+* body .option__choiceButton i {
+  margin-left: 5%;
+}
+* body a.restaurant_link {
+  text-decoration: none;
+  color: black;
+}
+* body .restaurants__card {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   border-radius: 20px;
   text-decoration: none;
   color: black;
-  padding: 5px;
+  margin-bottom: 10%;
+  /*** Affichage inconplet 
+  i{   } ***/
+}
+* body .restaurants__cardVisual {
+  width: 85vw;
+  height: 168px;
+  border-radius: 1.25rem 1.25rem 0rem 0rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+* body .restaurants__cardContent {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  height: 83px;
+}
+* body footer {
+  display: flex;
+  position: fixed; /* Fixer le footer en bas de la page */
+  bottom: 0; /* Le placer en bas de la page */
+  width: 100%; /* Largeur totale de la page */
+  background-color: #353535;
+  color: white;
+  width: 100vw;
+}
+* body footer__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+* body footer h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 18px;
 }/*# sourceMappingURL=style.css.map */
