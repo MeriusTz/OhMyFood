@@ -16,44 +16,89 @@
             $background: #F6F6F6;
         /* Définition de la police */
             font-family: 'Roboto', sans-serif;
-
+            
         /* Centrer le contenu du corps de la page */
         body {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             margin: 0;
             padding: 0;
             background-color: $background;
+            
             header {    
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                background-color: white;
                 width: 100%;
                 .logo {
+                   
                    margin: 15px;  
                 }
                 .restaurant_img{
-                    height: 275px;
+                    height: 300px;
+                    width: 100%;
+                    object-fit:cover;
                 }
             }   
             .menu{
-                
+                position: relative;
+                bottom: 45px;
+                width: 100%;
+                margin: 0px 50%;
+                border-radius: 40px 40px 0px 0px;
+                background-color: $background;
                 &__title{
                     display: flex;
                     align-items: center;
-                    justify-content: space-between;
+                    
                     h1{
                         font-family: 'Shrikhand', cursive;
                         font-weight: 400;
                         font-size: 28px;
-                        margin-left: -15px;
+                        margin: 30px 5% 0px 5%;
                     }
                     i{
                         font-size: 30px;
+                        margin-left: 15%;
+                        margin-top: 20px;
                     }
+                    
+                }
+                h2{
+                    font-size: 16px;
+                    font-weight: 300;
+                    margin: 0 5% 12px 5%;
+                    margin-top: 40px;
+                    text-decoration: underline;
+
+                    text-underline-offset: 0.2em; /* Ajustez la position verticale si nécessaire */
+                }
+                .choice{
+
+                    background-color: white;
+                    line-height: 0;
+                    border-radius: 15px;
+                    margin: 0 5% 12px 5%;
+                    padding: 5px 15px;
+                    box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001A;
+                    
+                    .details{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        p{
+                            font-size: 15px;
+                            font-weight: 300;
+                            letter-spacing: 0em;
+                            text-align: left;
+
+                        }
+                    }    
+                    
                 }
                 
             }     
@@ -62,7 +107,7 @@
             .button {
                 display: flex;
                 align-items: center; 
-                
+                margin-bottom: 40px;
                 width: 186px;
                 height: 50px;
                 border-radius: 25px;
@@ -70,7 +115,7 @@
                 box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
         
                 a{
-                    justify-content: center;
+                    text-align: center;
                     text-decoration: none;
                     color: white;
                     flex-grow: 1; /* Etendre le texte sur toute la largeur */
