@@ -16,16 +16,24 @@
 }
 * body header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: white;
   width: 100%;
 }
+* body header i {
+  position: absolute;
+  text-decoration: none;
+  color: #353535;
+  font-size: 23px;
+  left: 23px;
+  top: 22px;
+}
 * body header .logo {
   margin: 15px;
 }
-* body header .restaurant_img {
+* body .restaurant_img {
   height: 300px;
   width: 100%;
   -o-object-fit: cover;
@@ -42,6 +50,7 @@
 * body .menu__title {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 * body .menu__title h1 {
   font-family: "Shrikhand", cursive;
@@ -51,7 +60,7 @@
 }
 * body .menu__title i {
   font-size: 30px;
-  margin-left: 15%;
+  margin-right: 40px;
   margin-top: 20px;
 }
 * body .menu h2 {

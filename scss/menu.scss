@@ -5,13 +5,11 @@
 
 
         /* Variables pour les couleurs */
-            $green-bg: #99E2D0;
+            $light-green: #99E2D0;
             $green-ft:#008766;
-            $purple: #9356DC;
             $black: #101010;
-            $location:#353535;
-            $iconnav:#7E7E7E;
-            $bgnav: #EAEAEA;
+            $grey:#353535;
+            $light-grey:#7E7E7E;
             $button-gradient: linear-gradient(to top, #9356DC, #FF79DA);
             $background: #F6F6F6;
         /* Définition de la police */
@@ -28,21 +26,29 @@
             
             header {    
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
                 justify-content: center;
                 align-items: center;
                 background-color: white;
                 width: 100%;
+                i{
+                    position: absolute;
+                    text-decoration: none;
+                    color: $grey;
+                    font-size: 23px;
+                    left: 23px;
+                    top: 22px;    
+                }
                 .logo {
-                   
                    margin: 15px;  
                 }
-                .restaurant_img{
-                    height: 300px;
-                    width: 100%;
-                    object-fit:cover;
-                }
+
             }   
+            .restaurant_img{
+                height: 300px;
+                width: 100%;
+                object-fit:cover;
+            }
             .menu{
                 position: relative;
                 bottom: 45px;
@@ -53,7 +59,7 @@
                 &__title{
                     display: flex;
                     align-items: center;
-                    
+                    justify-content: space-between;
                     h1{
                         font-family: 'Shrikhand', cursive;
                         font-weight: 400;
@@ -62,7 +68,7 @@
                     }
                     i{
                         font-size: 30px;
-                        margin-left: 15%;
+                        margin-right: 40px;
                         margin-top: 20px;
                     }
                     
@@ -73,11 +79,10 @@
                     margin: 0 5% 12px 5%;
                     margin-top: 40px;
                     text-decoration: underline;
-
                     text-underline-offset: 0.2em; /* Ajustez la position verticale si nécessaire */
                 }
-                .choice{
 
+                .choice{
                     background-color: white;
                     line-height: 0;
                     border-radius: 15px;
@@ -131,7 +136,7 @@
                 bottom: 0; /* Le placer en bas de la page */
                 width: 100%; /* Largeur totale de la page */
                 height: 186px;
-                background-color: $location;
+                background-color: $grey;
                 color: white;
                 padding-left: 10%;
                 font-weight: 700;
