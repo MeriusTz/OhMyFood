@@ -90,30 +90,60 @@
   padding-top: 3px;
   border-bottom: 3px solid #99E2D0;
 }
-* body .menu .choice {
-  background-color: white;
+* body .menu .choice_card {
+  background-color: #99E2D0;
   line-height: 0;
   border-radius: 15px;
+  display: flex;
+  flex-direction: row;
   margin: 0 5% 12px 5%;
-  padding: 5px 15px;
   box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
+  transform: scaleX(1);
 }
-* body .menu .choice__title {
+* body .menu .choice_card .choice {
+  display: flex;
+  z-index: 2;
+  flex-direction: column;
+  width: 110%;
+  background-color: white;
+  padding: 5px 15px;
+  border-radius: 15px;
+}
+* body .menu .choice_card .choice:hover + #choice__check {
+  animation: check 0.4s ease-in-out;
+}
+* body .menu .choice_card .choice__title {
   font-weight: 600;
   font-size: 18px;
 }
-* body .menu .choice .details {
+* body .menu .choice_card .choice .details {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-* body .menu .choice .details__desc {
+* body .menu .choice_card .choice .details__desc {
   font-size: 15px;
   font-weight: 300;
 }
-* body .menu .choice .details__price {
+* body .menu .choice_card .choice .details__price {
   font-weight: 700;
   color: #353535;
+}
+* body .menu .choice_card #choice__check {
+  color: white;
+  align-self: center;
+  font-size: 0px;
+  margin: 0px;
+}
+@keyframes check {
+  from {
+    font-size: 0px;
+    margin: 0;
+  }
+  to {
+    font-size: 20px;
+    margin: 0 3%;
+  }
 }
 * body .button {
   display: flex;
@@ -199,7 +229,7 @@
   * body .menu h2 {
     margin: 2.5rem 15% 0.75rem 15%;
   }
-  * body .menu .choice {
+  * body .menu .choice_card {
     margin: 0 15% 0.75rem 15%;
     white-space: nowrap;
   }
