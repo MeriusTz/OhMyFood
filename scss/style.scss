@@ -90,32 +90,31 @@
                 font-size: 18px;
             }
         }
-    
+
+
         .button {
             display: flex;
             align-items: center; 
             width: 218px;
             height: 50px;
             border-radius: 25px;
-            background: var(--Button-Gradient, $button-gradient);
+            background: var(--button-gradient, $button-gradient);
             box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-                    
+            transition: all 0.3s ease-in;
             &:hover {
-                filter: brightness(150%);               
+                filter: brightness(120%);
+                box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
             }
-                
-                a {
-                    text-decoration: none;
-                    color: white;
-                    font-size: 16px;
-                    font-weight: 500;
-                    flex-grow: 1;
+            a {
+                text-decoration: none;
+                color: white;
+                font-size: 16px;
+                font-weight: 500;
+                flex-grow: 1;
             }
         }
         
-        .button:hover {
-            transition: background-color 0.3s ease;
-        }
+
         
         .option {
             
@@ -201,12 +200,24 @@
                     margin-top: 0px;
                     padding-bottom: 15px;
                 }
-                i{
+                
+                //ICON FAV A FINIR
+                #toggle__heart{
                     position: absolute;
                     left: 85%;
                     top: 75%;
                     font-size: 200%;
-                    
+                }
+
+                input[type="checkbox"] {
+                    display: none;
+                }
+                input[type="checkbox"]:checked + #toggle__heart{
+                    font: var(--fa-font-solid);
+                    font-size: 200%;
+                    background: linear-gradient(to top, #9356DC, #FF79DA);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
             
             }      
