@@ -244,6 +244,9 @@
     margin: 5px;
     padding-right: 15px;
   }
+  * body .option__choice .num {
+    margin-top: 7%;
+  }
   * body .option__choiceButton {
     width: 25vw;
     height: 100%;

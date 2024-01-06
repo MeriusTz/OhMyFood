@@ -294,6 +294,10 @@
             &__choice {
                 margin: 5px;
                 padding-right: 15px;
+
+                .num {
+                    margin-top: 7%;
+                }
                 &Button {
                     width: 25vw;
                     height: 100%;
