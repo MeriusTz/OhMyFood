@@ -98,19 +98,14 @@
   flex-direction: row;
   margin: 0 5% 12px 5%;
   box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
-  transform: scaleX(1);
 }
 * body .menu .choice_card .choice {
   display: flex;
-  z-index: 2;
   flex-direction: column;
-  width: 110%;
+  width: 100%;
   background-color: white;
   padding: 5px 15px;
   border-radius: 15px;
-}
-* body .menu .choice_card .choice:hover + #choice__check {
-  animation: check 0.4s ease-in-out;
 }
 * body .menu .choice_card .choice__title {
   font-weight: 600;
@@ -128,6 +123,9 @@
 * body .menu .choice_card .choice .details__price {
   font-weight: 700;
   color: #353535;
+}
+* body .menu .choice_card .choice:hover + #choice__check {
+  animation: check 0.4s ease-in-out;
 }
 * body .menu .choice_card #choice__check {
   color: white;
