@@ -72,22 +72,22 @@
                     }
                     /// ICON FAV                   
 
-                    #toggle__heart{
+                    #heart{
                         font-size: 30px;
                         margin-right: 40px;
                         margin-top: 30px;
+                        font-size: 200%;
+                        cursor: pointer;
+                        
+                        &:hover{
+                            font: var(--fa-font-solid);
+                            font-size: 200%;
+                            background: linear-gradient(to top, #9356DC, #FF79DA);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
                     }
-                    
-                    input[type="checkbox"] {
-                        display: none;
-                    }
-                    input[type="checkbox"]:checked + #toggle__heart{
-                        font: var(--fa-font-solid);
-                        font-size: 30px;
-                        background: linear-gradient(to top, #9356DC, #FF79DA);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    }
+
 
                     
                 }
@@ -124,7 +124,13 @@
                         background-color: white;
                         padding: 5px 15px;
                         border-radius: 15px;
-                        
+
+                        &:hover + #choice__check {
+                             animation: icon__check 0.4s ease-in-out both;
+                             //animation: card__check 0.4s ease-in-out both;
+                        }
+
+
                         &__title{
                             font-weight: 600;
                             font-size: 18px;
@@ -146,21 +152,28 @@
                                 
                             }
                         }    
-                        
-                        &:hover + #choice__check {
-                             animation: check 0.4s ease-in-out;
-                        }
+                        // @keyframes card__check {
+                            
+                        //     from{
+       
+                        //     }
+
+                        //     to{
+                        //         border: 0px;
+                        //     }
+
+                        // }
                     }
                     #choice__check{
                         color: white;
                         align-self: center;
                         font-size: 0px;
                         margin: 0px;
-                        @keyframes check {
+                        
+                        @keyframes icon__check {
                             
                             from{
-                                font-size: 0px;
-                                margin: 0;
+       
                             }
 
                             to{
@@ -184,10 +197,10 @@
                 background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
                 box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
                 margin: 5% auto;
-                transition: all 0.3s ease-in;
+                transition: filter 0.3s ease-in;
                 
                 &:hover {
-                    filter: brightness(120%);               
+                    filter: brightness(150%);               
                 }
                 a{
                     text-align: center;

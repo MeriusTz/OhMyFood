@@ -202,22 +202,20 @@
                 }
                 
                 //ICON FAV A FINIR
-                #toggle__heart{
+                #heart{
                     position: absolute;
                     left: 85%;
                     top: 75%;
                     font-size: 200%;
-                }
-
-                input[type="checkbox"] {
-                    display: none;
-                }
-                input[type="checkbox"]:checked + #toggle__heart{
-                    font: var(--fa-font-solid);
-                    font-size: 200%;
-                    background: linear-gradient(to top, #9356DC, #FF79DA);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
+                    cursor: pointer;
+                    
+                    &:hover{
+                        font: var(--fa-font-solid);
+                        font-size: 200%;
+                        background: linear-gradient(to top, #9356DC, #FF79DA);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
                 }
             
             }      
