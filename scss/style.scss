@@ -1,356 +1,363 @@
-    /*** General ***/
+/*** General ***/
+
+* {
+    // Définit les variables de couleur pour une utilisation dans le fichier
+    $light-green: #99E2D0; 
+    $green:#008766; 
+    $purple: #9356DC; 
+    $black: #101010; 
+    $grey:#353535; 
+    $light-grey:#7E7E7E; 
+    $location-background: #EAEAEA; 
+    $button-gradient: linear-gradient(to top, #9356DC, #FF79DA); 
+    $background: #F6F6F6; 
+
+    // Définit la police par défaut pour tous les éléments
+    font-family: 'Roboto', sans-serif;
+
+   
+    .fa-location-dot {
+        color: $grey; 
+    }
+    .fa-mobile-screen-button, .fa-list {
+        color: $light-grey; 
+    }
+    .fa-store {
+        color: $purple; 
+    }
 
 
-    * {
-
-
-    /* Variables pour les couleurs */
-        $light-green: #99E2D0;
-        $green:#008766;
-        $purple: #9356DC;
-        $black: #101010;
-        $grey:#353535;
-        $light-grey:#7E7E7E;
-        $location-background: #EAEAEA;
-        $button-gradient: linear-gradient(to top, #9356DC, #FF79DA);
-        $background: #F6F6F6;
-    /* Définition de la police */
-        font-family: 'Roboto', sans-serif;
-
-    /* Icônes FontAwesome */
-        .fa-location-dot{
-            color: $grey;
-        }
-        .fa-mobile-screen-button, .fa-list{
-            color: $light-grey;
-        }
-        .fa-store{
-            color: $purple;
-        }
-
-
-
-
-
-    /* Centrer le contenu du corps de la page */
     body {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        margin: 0; 
         padding: 0;
 
-        /* Bases pour les cartes */
+        
         .logo {
-            margin: 15px;
-           
-        }
-        header {    
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-
-        .place { 
-            display: flex;
-            align-items: baseline;
-            box-shadow: 0 0px 10px -5px rgba(0, 0, 0, 1); /* Ajoute l'ombre ici */
-            p, i {
-                background-color: $location-background;
-            }
-            background-color: $location-background;
-            flex-direction: row;
-            justify-content: center;
-            width: 200vw;
-            gap: 15px;
+            margin: 15px; 
         }
         
-        }
-
-
-        .info {
+        
+        header {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            text-align: center;
-            background-color: $background;
-            width: 200vw;
-            height: 25em;
-            h1{
-                width: 70%;
-                font-weight: 700;
-                font-size: 24px;
-            }
-            p{
-                padding: 0 10%;
-                font-weight: 300;
-                font-size: 18px;
+            align-items: center; 
+            width: 100%; // Largeur totale
+
+            
+            .place { 
+                display: flex; 
+                align-items: baseline; 
+                box-shadow: 0 0px 10px -5px rgba(0, 0, 0, 1); 
+                p, i {
+                    background-color: $location-background; 
+                }
+                background-color: $location-background; // Couleur de fond
+                flex-direction: row; 
+                justify-content: center; 
+                width: 100vw; // Largeur complète de la fenêtre
+                gap: 15px; 
             }
         }
 
-
-        .button {
-            display: flex;
+        
+        .info {
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
             align-items: center; 
-            width: 218px;
-            height: 50px;
-            border-radius: 25px;
-            background: var(--button-gradient, $button-gradient);
-            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-            transition: all 0.3s ease-in;
+            text-align: center; 
+            background-color: $background; 
+            width: 200vw; 
+            height: 25em; 
+            h1 {
+                width: 70%; 
+                font-weight: 700; 
+                font-size: 24px; 
+            }
+            p {
+                padding: 0 10%; 
+                font-weight: 300; 
+                font-size: 18px; 
+            }
+        }
+
+        
+        .button {
+            display: flex; 
+            align-items: center; 
+            width: 218px; 
+            height: 50px; 
+            border-radius: 25px; 
+            background: var(--button-gradient, $button-gradient); 
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); 
+            transition: all 0.3s ease-in; // Transition douce pour les effets de survol
             &:hover {
-                filter: brightness(120%);
-                box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5);
+                filter: brightness(120%); // Plus lumineux lors du survol
+                box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5); // Ombre plus prononcée lors du survol
             }
             a {
-                text-decoration: none;
-                color: white;
+                text-decoration: none; 
+                color: white; 
                 font-size: 16px;
                 font-weight: 500;
-                flex-grow: 1;
+                flex-grow: 1; 
             }
         }
-        
-
-        
-        .option {
             
-            &__menu{
-                display: flex;
-                flex-direction: column;        
-                padding-bottom: 10%;
-            }
-            h2{
-                line-height: 2;
-            }
-                &__choice {
-                display: flex;
-                flex-direction: row;
-                margin-bottom: 3%;
-                .num {
-                    font-size: 14.18px;
-                    width: 20px;
-                    height: 20px;
-                    border-radius: 50%;
-                    color: white;
-                    background-color: $purple;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
+    
+            
+            .option {
                 
-                &Button {
+                &__menu{
+                    display: flex;
+                    flex-direction: column;        
+                    padding-bottom: 10%;
+                }
+                h2{
+                    line-height: 2;
+                }
+                    &__choice {
                     display: flex;
                     flex-direction: row;
-                    border-radius: 20px;
-                    background: $background;
-                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-                    width: 85vw;
-                    gap: 5%;
-                    align-items: center;
-                    margin-bottom: 5%;
-                    i{
-                        margin-left: 5%;
+                    margin-bottom: 3%;
+                    .num {
+                        font-size: 14.18px;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        color: white;
+                        background-color: $purple;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    
+                    &Button {
+                        display: flex;
+                        flex-direction: row;
+                        border-radius: 20px;
+                        background: $background;
+                        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+                        width: 85vw;
+                        gap: 5%;
+                        align-items: center;
+                        margin-bottom: 5%;
+                        i{
+                            margin-left: 5%;
+                        }
                     }
                 }
-            }
-    }
-
-
-       
-    .restaurants {
-        background-color: $location-background;
-        width: 100%;
-        padding-left: 10%;
-        h1{
-            margin-top: 5%;
-            margin-bottom: 30px;
         }
-        &__link{
-            text-decoration: none;
-            color: black;
-            height: 270px;
-            margin-bottom: 5%;
-            
-        }
-        &__card {
-            width: 90%;
-            display: flex;
-            flex-direction: column;
-            background-color: white;
-            filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-            border-radius: 20px;
-            text-decoration: none;
-            color: black;
-            margin-bottom: 10%;
-            &Visual {
-                height: 168px;
-                border-radius: 1.25rem 1.25rem 0rem 0rem;
-                object-fit:cover;
+    
+    
+           
+        .restaurants {
+            background-color: $location-background;
+            width: 100%;
+            padding-left: 10%;
+            h1{
+                margin-top: 5%;
+                margin-bottom: 30px;
             }
-            &Content{
+            &__link{
+                text-decoration: none;
+                color: black;
+                height: 270px;
+                margin-bottom: 5%; 
+
+                
+            }
+            &__card {
+                width: 90%;
                 display: flex;
                 flex-direction: column;
-                margin-left: 5%;
-                p{
-                    line-height: 2px;
-                    margin-top: 0px;
-                    padding-bottom: 15px;
-                }
-                
-                //ICON FAV A FINIR
-                #heart{
-                    position: absolute;
-                    left: 85%;
-                    top: 75%;
-                    font-size: 200%;
-                    cursor: pointer;
-                    
-                    &:hover{
-                        font: var(--fa-font-solid);
-                        font-size: 200%;
-                        background: linear-gradient(to top, #9356DC, #FF79DA);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    }
-                }
-            
-            }      
-
-        }
-        
-    }
-    
-    footer{
-        display: flex;
-        flex-direction: column;
-        bottom: 0; /* Le placer en bas de la page */
-        width: 100%; /* Largeur totale de la page */
-        height: 186px;
-        background-color: $grey;
-        color: white;
-        padding-left: 10%;
-        font-weight: 700;
-
-        h2{
-            font-family: 'Shrikhand', cursive;
-            font-weight: 400;
-            font-size: 18px;
-        }
-        .content{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 7px;
-            a{
+                background-color: white;
+                filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+                border-radius: 20px;
                 text-decoration: none;
-                color: white;
-            }
-            &__iconRestaurant{
-                font-weight: 500;
-                font-size: 16px;
-                &::before{
-                    content: "\f2e7";
-                    margin-right: 10px;
-                    font-family: FontAwesome;
-                    font-size:  15px ;
+                color: black;
+                margin-bottom: 10%;
+                &New{
+                    position: absolute;
+                    color: $green;
+                    background-color: $light-green;
+                    padding: 1.5% 3%;
+                    right: 2rem;
+                    border-radius: 2px;
                 }
-            }
-            &__iconPartner{
-                font-weight: 500;
-                font-size: 16px;
-                &::before{
-                    content: "\f4c4";
-                    margin-right: 8px;
-                    font-size:  12px ;
-                    font-family: FontAwesome;
-                }
-            }
-            &__icon{
-                font-weight: 400;
-                font-size: 16px;
-            }
-        }
-    }
-}
-@media (min-width: 768px) {
-    body {
-        
-        .option{
-
-            
-            
-            &__menu {
-                
-                display: flex;
-                flex-direction: row;
-                padding-bottom: 5% ;
-            }
-            &__choice {
-                margin: 5px;
-                padding-right: 15px;
-
-                .num {
-                    margin-top: 7%;
-                }
-                &Button {
-                    width: 25vw;
-                    height: 100%;
+                &Visual {
+                    height: 168px;
+                    border-radius: 1.25rem 1.25rem 0rem 0rem;
+                    object-fit: cover;
                     
                 }
-        
-        
-            }
-        }
-
-        .restaurants{
-            &__list{
-                padding-left: 6%;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap; /* Permet aux cartes de passer à la ligne */
-                gap: 10%;
+                &Content{
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 5%;
+                    p{
+                        line-height: 2px;
+                        margin-top: 0px;
+                        padding-bottom: 15px;
+                    }
+                    
+                    // Style pour les icônes de cœur (pour les favoris)
+                    #heart1, #heart2, #heart3, #heart4 {
+                        position: absolute;
+                        left: 85%;
+                        top: 75%;
+                        font-size: 200%;
+                        cursor: pointer;
+                        
+                        &:hover{
+                            font: var(--fa-font-solid);// Police d'icône (FontAwesome ici)
+                            font-size: 200%;
+                            background: linear-gradient(to top, #9356DC, #FF79DA);
+                            -webkit-background-clip: text; // Applique le dégradé sur l'icon
+                            -webkit-text-fill-color: transparent; // Rend l'icon transparent pour montrer le dégradé
+                        }
+                    }
+                
+                }      
+    
             }
             
-            &__card {
-                width: 35vw; /* 45% pour laisser un petit espace entre les cartes */
-            }
-
-    
         }
-
+        
         footer{
             display: flex;
-            flex-direction: row-reverse;
+            flex-direction: column;
+            bottom: 0; // Le placer en bas de la page 
+            width: 100%; // Largeur totale de la page 
+            height: 186px;
+            background-color: $grey;
+            color: white;
+            padding-left: 10%;
             font-weight: 700;
-            gap: 5%;
-            
+    
             h2{
                 font-family: 'Shrikhand', cursive;
-                padding-right: 10%;
                 font-weight: 400;
                 font-size: 18px;
-                margin-bottom: 1.5%;
             }
             .content{
                 display: flex;
-                flex-direction: row;
-                justify-content: center;    
-                padding-bottom: 1.5%;
-                gap:20px;
-            }
-            h2, .content{
-                align-self: flex-end;
+                flex-direction: column;
+                justify-content: center;
+                gap: 7px;
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+                &__iconRestaurant{
+                    font-weight: 500;
+                    font-size: 16px;
+                    &::before{
+                        content: "\f2e7";
+                        margin-right: 10px;
+                        font-family: FontAwesome;
+                        font-size:  15px ;
+                    }
+                }
+                
+                &__iconPartner{
+                    font-weight: 500;
+                    font-size: 16px;
+                    &::before{
+                        content: "\f4c4";
+                        margin-right: 8px;
+                        font-size:  12px ;
+                        font-family: FontAwesome;
+                    }
+                }
+                // Style général pour les icônes
+                &__icon{
+                    font-weight: 400;
+                    font-size: 16px;
+                }
             }
         }
-}
+    }
+    @media (min-width: 768px) {
+        body {
+            
+            .option{
+    
+                
+                
+                &__menu {
+                    
+                    display: flex;
+                    flex-direction: row;
+                    padding-bottom: 5% ;
+                }
+                &__choice {
+                    margin: 5px;
+                    padding-right: 15px;
+    
+                    .num {
+                        margin-top: 7%;
+                    }
+                    &Button {
+                        width: 25vw;
+                        height: 100%;
+                        
+                    }
+            
+            
+                }
+            }
+    
+            .restaurants{
+                &__list{
+                    padding-left: 6%;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: 10%;
+                }
+                
+                &__card {
+                    width: 35vw; 
+                }
+    
         
-}
-
-}
+            }
     
+            footer{
+                display: flex;
+                flex-direction: row-reverse; // Disposition en ligne mais dans l'ordre inverse
+                font-weight: 700;
+                gap: 5%;
+                
+                h2{
+                    font-family: 'Shrikhand', cursive;
+                    padding-right: 10%;
+                    font-weight: 400;
+                    font-size: 18px;
+                    margin-bottom: 1.5%;
+                }
+                .content{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;    
+                    padding-bottom: 1.5%;
+                    gap:20px;
+                }
+                h2, .content{
+                    align-self: flex-end; // Alignement  à la fin de leur axe de flexbox
+                }
+            }
+        }
+            
+    }
     
-    
+    }
+        
+        
+        

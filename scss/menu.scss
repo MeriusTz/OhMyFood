@@ -10,7 +10,9 @@
             $black: #101010;
             $grey:#353535;
             $light-grey:#7E7E7E;
-            $button-gradient: linear-gradient(to top, #9356DC, #FF79DA);
+            $purple: #9356DC;
+            $pink: #FF79DA;
+            $button-gradient: linear-gradient(to top, $purple, $pink);
             $background: #F6F6F6;
         /* Définition de la police */
             font-family: 'Roboto', sans-serif;
@@ -47,7 +49,7 @@
             .restaurant_img{
                 position:absolute;
                 top: 62px;
-                z-index: -1;
+                z-index: -1; // en arrière-plan
                 height: 300px;
                 width: 100%;
                 object-fit:cover;
@@ -56,8 +58,8 @@
             .menu{
                 position: relative;
                 width: 100%;
-                top: 255px;
-                margin: 0px 50%;
+                top: 255px; // Position sous &_img
+                margin: 0px 50%; // Marge (horizontale centrée)
                 border-radius: 40px 40px 0px 0px;
                 background-color: $background;
                 &__title{
@@ -70,7 +72,7 @@
                         font-size: 28px;
                         margin: 30px 5% 0px 5%;
                     }
-                    /// ICON FAV                   
+                               
 
                     #heart{
                         font-size: 30px;
@@ -78,13 +80,13 @@
                         margin-top: 30px;
                         font-size: 200%;
                         cursor: pointer;
-                        
+                        // Styles au survol de l'icône
                         &:hover{
-                            font: var(--fa-font-solid);
+                            font: var(--fa-font-solid); // Police FontAwesome solide
                             font-size: 200%;
                             background: linear-gradient(to top, #9356DC, #FF79DA);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
+                            -webkit-background-clip: text; // Applique le dégradé sur l'icon
+                            -webkit-text-fill-color: transparent; // Rend l'icon transparent pour montrer le dégradé
                         }
                     }
 
@@ -94,12 +96,11 @@
                 h2{
                     font-size: 16px;
                     font-weight: 300;
-/* Ajustez l'alignement du titre */
                     margin: 0 5% 12px 5%;
                     margin-top: 40px;
                 }
-/* Soulignement */
-                h2::after{
+
+                h2::after{  // Bordure inférieure (soulignement)
                     content: "";
                     display: block;
                     width: 40px;
@@ -107,13 +108,17 @@
                     border-bottom: 3px solid $light-green;
                 }
                 .choice_card{
-                    background-color: $light-green;
+                    width: 87%;
+                    height: 70px;
                     line-height: 0;
                     border-radius: 15px;
                     display: flex;
                     flex-direction: row;
                     margin: 0 5% 12px 5%;
                     box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001A;
+                    padding: 5px 0px 5px 15px;
+                    background-color: white;
+                    overflow: hidden;  // Cache le contenu débordant
  
                     
                     
@@ -121,13 +126,11 @@
                         display: flex;
                         flex-direction: column;
                         width: 100%;
-                        background-color: white;
-                        padding: 5px 15px;
-                        border-radius: 15px;
+                        
 
                         &:hover + #choice__check {
-                             animation: icon__check 0.4s ease-in-out both;
-                             //animation: card__check 0.4s ease-in-out both;
+                             animation: icon__check 0.2s ease-in-out both; // Animation menu
+                            
                         }
 
 
@@ -149,36 +152,28 @@
                             &__price{
                                 font-weight: 700;
                                 color: $grey;
+                                margin-right: 2%;
                                 
                             }
                         }    
-                        // @keyframes card__check {
-                            
-                        //     from{
-       
-                        //     }
 
-                        //     to{
-                        //         border: 0px;
-                        //     }
-
-                        // }
                     }
                     #choice__check{
                         color: white;
                         align-self: center;
-                        font-size: 0px;
-                        margin: 0px;
+                        font-size: 0px;  // Taille de police initiale pour l'animation
+                        padding: 100% 0%; // Padding initiale d'animation
+                        background-color: $light-green;
                         
                         @keyframes icon__check {
                             
                             from{
-       
+                                // Début de l'animation (état initial)
                             }
 
                             to{
-                                font-size: 20px;
-                                margin: 0 3%;
+                                font-size: 20px; // Taille de la police à la fin de l'animation
+                                padding: 100% 3%; // Padding final pour l'animation
                             }
 
                         }
@@ -194,19 +189,19 @@
                 width: 186px;
                 height: 50px;
                 border-radius: 25px;
-                background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+                background: var(--Button-Gradient, linear-gradient(193deg, $purple -11.44%, $pink 123.93%));
                 box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
                 margin: 5% auto;
                 transition: filter 0.3s ease-in;
                 
-                &:hover {
+                &:hover { // Lors du survol, augmente la luminosité du bouton de 50%
                     filter: brightness(150%);               
                 }
                 a{
                     text-align: center;
                     text-decoration: none;
                     color: white;
-                    flex-grow: 1; /* Etendre le texte sur toute la largeur */
+                    flex-grow: 1; // remplit l'espace disponible dans le bouton
                 }
                 
             }
@@ -284,8 +279,9 @@
                 }
                 
                 .choice_card{
+                    width: 70%;
                     margin: 0 15% 0.75rem 15%;
-                    white-space: nowrap;
+                    white-space: nowrap; // Empêche le texte à l'intérieur de .choice_card de passer à la ligne
                 }
 
             }

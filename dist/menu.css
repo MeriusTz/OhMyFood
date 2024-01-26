@@ -48,7 +48,6 @@
   margin: 0px 50%;
   border-radius: 40px 40px 0px 0px;
   background-color: #F6F6F6;
-  /* Soulignement */
 }
 * body .menu__title {
   display: flex;
@@ -78,7 +77,6 @@
 * body .menu h2 {
   font-size: 16px;
   font-weight: 300;
-  /* Ajustez l'alignement du titre */
   margin: 0 5% 12px 5%;
   margin-top: 40px;
 }
@@ -90,24 +88,25 @@
   border-bottom: 3px solid #99E2D0;
 }
 * body .menu .choice_card {
-  background-color: #99E2D0;
+  width: 87%;
+  height: 70px;
   line-height: 0;
   border-radius: 15px;
   display: flex;
   flex-direction: row;
   margin: 0 5% 12px 5%;
   box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
+  padding: 5px 0px 5px 15px;
+  background-color: white;
+  overflow: hidden;
 }
 * body .menu .choice_card .choice {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: white;
-  padding: 5px 15px;
-  border-radius: 15px;
 }
 * body .menu .choice_card .choice:hover + #choice__check {
-  animation: icon__check 0.4s ease-in-out both;
+  animation: icon__check 0.2s ease-in-out both;
 }
 * body .menu .choice_card .choice__title {
   font-weight: 600;
@@ -125,17 +124,19 @@
 * body .menu .choice_card .choice .details__price {
   font-weight: 700;
   color: #353535;
+  margin-right: 2%;
 }
 * body .menu .choice_card #choice__check {
   color: white;
   align-self: center;
   font-size: 0px;
-  margin: 0px;
+  padding: 100% 0%;
+  background-color: #99E2D0;
 }
 @keyframes icon__check {
   to {
     font-size: 20px;
-    margin: 0 3%;
+    padding: 100% 3%;
   }
 }
 * body .button {
@@ -156,7 +157,7 @@
   text-align: center;
   text-decoration: none;
   color: white;
-  flex-grow: 1; /* Etendre le texte sur toute la largeur */
+  flex-grow: 1;
 }
 * body footer {
   position: relative;
@@ -223,6 +224,7 @@
     margin: 2.5rem 15% 0.75rem 15%;
   }
   * body .menu .choice_card {
+    width: 70%;
     margin: 0 15% 0.75rem 15%;
     white-space: nowrap;
   }
