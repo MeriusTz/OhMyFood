@@ -128,7 +128,7 @@
                         width: 100%;
                         
 
-                        &:hover + #choice__check {
+                        &:hover + .icon__container {
                              animation: icon__check 0.2s ease-in-out both; // Animation menu
                             
                         }
@@ -158,12 +158,13 @@
                         }    
 
                     }
-                    #choice__check{
-                        color: white;
-                        align-self: center;
-                        font-size: 0px;  // Taille de police initiale pour l'animation
-                        padding: 100% 0%; // Padding initiale d'animation
-                        background-color: $light-green;
+                    .icon__container  {
+                            color: white;
+                            align-self: center;
+                            font-size: 0px;  // Taille de police initiale pour l'animation
+                            padding: 100% 0%; // Padding initiale d'animation
+                            background-color: $light-green;
+                        }
                         
                         @keyframes icon__check {
                             
@@ -321,4 +322,4 @@
             
     }
 
-}
+

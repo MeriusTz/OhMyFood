@@ -105,7 +105,7 @@
   flex-direction: column;
   width: 100%;
 }
-* body .menu .choice_card .choice:hover + #choice__check {
+* body .menu .choice_card .choice:hover + .icon__container {
   animation: icon__check 0.2s ease-in-out both;
 }
 * body .menu .choice_card .choice__title {
@@ -126,7 +126,7 @@
   color: #353535;
   margin-right: 2%;
 }
-* body .menu .choice_card #choice__check {
+* body .menu .choice_card .icon__container {
   color: white;
   align-self: center;
   font-size: 0px;
@@ -139,7 +139,7 @@
     padding: 100% 3%;
   }
 }
-* body .button {
+* .button {
   display: flex;
   align-items: center;
   width: 186px;
@@ -150,16 +150,16 @@
   margin: 5% auto;
   transition: filter 0.3s ease-in;
 }
-* body .button:hover {
+* .button:hover {
   filter: brightness(150%);
 }
-* body .button a {
+* .button a {
   text-align: center;
   text-decoration: none;
   color: white;
   flex-grow: 1;
 }
-* body footer {
+* footer {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -171,88 +171,89 @@
   padding-left: 10%;
   font-weight: 700;
 }
-* body footer h2 {
+* footer h2 {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
   font-size: 18px;
 }
-* body footer .content {
+* footer .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 7px;
 }
-* body footer .content a {
+* footer .content a {
   text-decoration: none;
   color: white;
 }
-* body footer .content__iconRestaurant {
+* footer .content__iconRestaurant {
   font-weight: 500;
   font-size: 16px;
 }
-* body footer .content__iconRestaurant::before {
+* footer .content__iconRestaurant::before {
   content: "\f2e7";
   margin-right: 10px;
   font-family: FontAwesome;
   font-size: 15px;
 }
-* body footer .content__iconPartner {
+* footer .content__iconPartner {
   font-weight: 500;
   font-size: 16px;
 }
-* body footer .content__iconPartner::before {
+* footer .content__iconPartner::before {
   content: "\f4c4";
   margin-right: 8px;
   font-size: 12px;
   font-family: FontAwesome;
 }
-* body footer .content__icon {
+* footer .content__icon {
   font-weight: 400;
   font-size: 16px;
 }
+
 @media (min-width: 768px) {
-  * body {
+  body {
     background-color: white;
   }
-  * body .menu {
+  body .menu {
     width: 75%;
   }
-  * body .menu__title {
+  body .menu__title {
     justify-content: center;
   }
-  * body .menu h2 {
+  body .menu h2 {
     margin: 2.5rem 15% 0.75rem 15%;
   }
-  * body .menu .choice_card {
+  body .menu .choice_card {
     width: 70%;
     margin: 0 15% 0.75rem 15%;
     white-space: nowrap;
   }
-  * body footer {
+  body footer {
     display: flex;
     flex-direction: row-reverse;
     font-weight: 700;
     gap: 5%;
     height: 114px;
   }
-  * body footer h2 {
+  body footer h2 {
     font-family: "Shrikhand", cursive;
     padding-right: 10%;
     font-weight: 400;
     font-size: 18px;
     margin-bottom: 1.5%;
   }
-  * body footer .content {
+  body footer .content {
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding-bottom: 1.5%;
     gap: 20px;
   }
-  * body footer .content__iconPartner {
+  body footer .content__iconPartner {
     margin-right: 30px;
   }
-  * body footer h2, * body footer .content {
+  body footer h2, body footer .content {
     align-self: flex-end;
   }
 }/*# sourceMappingURL=menu.css.map */
