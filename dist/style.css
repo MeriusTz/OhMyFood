@@ -29,28 +29,28 @@
   background-color: white; /* Fond blanc qui couvre toute la page */
   display: flex;
   flex-direction: column;
+  gap: 20px;
   align-items: center;
   justify-content: center;
   z-index: 1; /* Assure que l'overlay est au-dessus de tout autre contenu */
   animation: fadeOut 1s forwards 1.3s;
 }
 * body .loader {
-  width: 200px;
-  height: 30px;
-  border-radius: 20px;
-  border: 1px solid black;
-  margin-top: 10%;
-  background: linear-gradient(to top, #9356DC, #FF79DA) 0/0% no-repeat #9356DC;
-  animation: l2 2s;
+  width: 30px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid #9356DC;
+  border-right-color: #FF79DA;
+  animation: spin 1s infinite linear;
 }
-@keyframes l2 {
+@keyframes spin {
   100% {
-    background-size: 110%;
+    transform: rotate(1turn);
   }
 }
 * body .loader__logo {
-  width: 30%;
-  animation: fade 1s ease-in-out;
+  width: 50%;
+  opacity: 85%;
 }
 @keyframes fadeOut {
   0% {
@@ -59,7 +59,7 @@
   100% {
     opacity: 0;
     display: none;
-    z-index: 0;
+    z-index: -1;
   }
 }
 * body .logo {
@@ -70,7 +70,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 110%;
 }
 * body header .place {
   display: flex;
