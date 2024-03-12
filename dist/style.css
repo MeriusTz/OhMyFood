@@ -20,6 +20,21 @@
   padding: 0;
   /* Animation de disparition du loader */
 }
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+  }
+}
 * body .overlay {
   position: fixed;
   top: 0;
@@ -43,24 +58,9 @@
   border-right-color: #FF79DA;
   animation: spin 1s infinite linear;
 }
-@keyframes spin {
-  100% {
-    transform: rotate(1turn);
-  }
-}
 * body .loader__logo {
   width: 50%;
   opacity: 85%;
-}
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    display: none;
-    z-index: -1;
-  }
 }
 * body .logo {
   margin: 15px;
@@ -213,14 +213,14 @@
   margin-top: 0px;
   padding-bottom: 15px;
 }
-* body .restaurants__cardContent #heart1, * body .restaurants__cardContent #heart2, * body .restaurants__cardContent #heart3, * body .restaurants__cardContent #heart4 {
+* body .restaurants__cardContent i {
   position: absolute;
   left: 85%;
   top: 75%;
   font-size: 200%;
   cursor: pointer;
 }
-* body .restaurants__cardContent #heart1:hover, * body .restaurants__cardContent #heart2:hover, * body .restaurants__cardContent #heart3:hover, * body .restaurants__cardContent #heart4:hover {
+* body .restaurants__cardContent i:hover {
   font: var(--fa-font-solid);
   font-size: 200%;
   background: linear-gradient(to top, #9356DC, #FF79DA);

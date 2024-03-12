@@ -36,6 +36,17 @@
         margin: 0; 
         padding: 0;
 
+          /* Animation de disparition du loader */
+          
+        @keyframes fadeOut {
+            0% { opacity: 1;  }
+            100% { opacity: 0; display: none; z-index: -1 }
+        }
+        @keyframes spin {
+            100%{
+                transform: rotate(1turn)
+            }
+        }        
         .overlay {
             position: fixed;
             top: 0;
@@ -61,23 +72,14 @@
             animation: spin 1s infinite linear;
           }
 
-          @keyframes spin {
-            100%{
-                transform: rotate(1turn)
-            }
-        }
+          
 
         .loader__logo {
           width: 50%;
           opacity: 85%;
         }
 
-          /* Animation de disparition du loader */
-          
-        @keyframes fadeOut {
-            0% { opacity: 1;  }
-            100% { opacity: 0; display: none; z-index: -1 }
-          }
+
 
         .logo {
             margin: 15px; 
@@ -250,7 +252,7 @@
                     }
                     
                     // Style pour les icônes de cœur (pour les favoris)
-                    #heart1, #heart2, #heart3, #heart4 {
+                    i {
                         position: absolute;
                         left: 85%;
                         top: 75%;
